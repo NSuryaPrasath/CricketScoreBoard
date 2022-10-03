@@ -16,15 +16,15 @@ public class Team
 		Toss toss=new Toss();
 		Scanner scan=new Scanner(System.in);
 		System.out.println("---- Cricket Score Board Console ----\n\n");
-		System.out.println("1 --> START GAME ");
+		System.out.println("Press 1 to Start ");
 		int choice=scan.nextInt();
 		if(choice==1)
 		{
 			System.out.println("1  --> India\n2  --> West Indies\n3  --> Australia\n4  --> England\n5  --> NewZealand\n6  --> Pakistan\n7  --> SouthAfrica\n8  --> Afghanistan\n9  --> SriLanka\n10 --> Bangladesh");
-			System.out.println("Select Your Team 1");
+			System.out.println("\nSelect Your Team 1");
 		    team1=scan.nextInt();
 		    System.out.println("1  --> India\n2  --> West Indies\n3  --> Australia\n4  --> England\n5  --> NewZealand\n6  --> Pakistan\n7  --> SouthAfrica\n8  --> Afghanistan\n9  --> SriLanka\n10 --> Bangladesh");
-		    System.out.println("Select Your Team 2");
+		    System.out.println("\nSelect Your Team 2");
 		    team2=scan.nextInt();
 		    if(team1==team2)
 		    {
@@ -33,7 +33,12 @@ public class Team
 		    }
 			teamplayer.teamDetails(team1, team2);
 		}
-		toss.toss(teamplayer.hs,teamplayer.team, team1, team2);
+		else
+		{
+			System.out.println("Please Enter Correct Choice");
+			getTeamDetails();
+		}
+		toss.toss(teamplayer.team, team1, team2);
 	}
 	public static void main(String args[])
 	{
