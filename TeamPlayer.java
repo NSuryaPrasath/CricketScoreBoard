@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class TeamPlayer
 {
 	public static String team1,team2;
-	Map<String, String[]> hs = new HashMap<String, String[]>();
 	static String team[] = new String[] { "India", "WestIndies", "Australia", "England", "NewZealand", "Pakistan",
 			"SouthAfrica", "Afghanistan", "SriLanka", "Bangladesh" };
 	static String India[] = {"Virat Kohli(C)", "Rohit Sharma(VC)", "KL Rahul",
@@ -45,26 +44,16 @@ public class TeamPlayer
 	public String[] batteam1;
 	public static String[] batteam2;
 	public String[] bowlteam1,bowlteam2;
-	public TeamPlayer(String[] team1player,String[] team2player)
-	{
-		this.team1player=team1player;
-		this.team2player=team2player;
-	}
+//	public TeamPlayer(String[] team1player,String[] team2player)
+//	{
+//		this.team1player=team1player;
+//		this.team2player=team2player;
+//	}
 	public TeamPlayer() {
 		// TODO Auto-generated constructor stub
 	}
-	public TeamPlayer teamDetails(int team1,int team2)
+	public void teamDetails(int team1,int team2)
 	{
-		hs.put(team[0], India);
-		hs.put(team[1], WestIndies);
-		hs.put(team[2], Australia);
-		hs.put(team[3], England);
-		hs.put(team[4], NewZealand);
-		hs.put(team[5], Pakistan);
-		hs.put(team[6], SouthAfrica);
-		hs.put(team[7], Afghanistan);
-		hs.put(team[8], SriLanka);
-		hs.put(team[9], Bangladesh);
 		if(team1==1 || team2==1)	
 		{
 			if(team1==1)
@@ -176,8 +165,6 @@ public class TeamPlayer
 			}
 		}
 		display(team,team1player,team2player,team1,team2);
-		return new TeamPlayer(team1player,team2player);
-		//getteam(team1player,team2player);
 	}
 	private void display(String[] team,String[] team1player, String[] team2player,int team1,int team2) 
 	{
@@ -189,15 +176,5 @@ public class TeamPlayer
 			System.out.printf("%-20s | %-14s\n",team1player[i],team2player[i]);
 		}
 		System.out.println("---------------------------------------------");
-//		for(int i=0;i<6;i++)
-//		{
-//			batteam1[i]=team1player[i];
-//			batteam2[i]=team2player[i];
-//		}
-//		for(int i=6;i<11;i++)
-//		{
-//			bowlteam1[i]=team1player[i];
-//			bowlteam2[i]=team2player[i];
-//		}
 	}
 }
