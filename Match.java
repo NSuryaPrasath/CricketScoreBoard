@@ -2,6 +2,7 @@ package team;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+//import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
@@ -174,12 +175,10 @@ public class Match extends TeamPlayer
 			bowl++;
 			if(wicket==10)
 			{
-				scoreboard.score(playerdet);
 				break;
 			}
 			System.out.println();
 		}
-		scoreboard.score(playerdet, strike,nostrike, outlist);
 	}
 	public void secondInnings(String[] teamplay,String[] teamplay2,String team[],int one,int two)
 	{
